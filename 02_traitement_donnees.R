@@ -190,10 +190,14 @@ lire_onglet <- function(f, onglet) {
 message("== 2. Lecture : ", PARAM$fichier_entree)
 f <- PARAM$fichier_entree
 if (!file.exists(f)) {
-  # Recherche du fichier sous le dossier de travail, puis choix manuel (RStudio)
+  # Recherche du fichier sous le dossier de travail (nom d'origine ou nom du depot
+  # 01 conforme au reglement), puis choix manuel (RStudio)
   nom <- basename(f)
-  trouves <- list.files(getwd(), pattern = paste0("^", gsub(".", "\\.", nom, fixed = TRUE), "$"),
-                        recursive = TRUE, full.names = TRUE, ignore.case = TRUE)
+  noms <- unique(c(nom, "Collecte_data_rempli_v6.xlsx",
+                   "Datagenius_01-collecte_D3_engineer_base-collecte-provinces-2015-2024_v6.xlsx"))
+  motif <- paste0("^(", paste(gsub(".", "\\.", noms, fixed = TRUE), collapse = "|"), ")$")
+  trouves <- list.files(getwd(), pattern = motif, recursive = TRUE, full.names = TRUE, ignore.case = TRUE)
+  trouves <- trouves[!grepl("depots[/\\\\]", trouves)]   # jamais les copies des dossiers de depot
   trouves <- trouves[!grepl("~\\$", trouves)]
   if (length(trouves)) {
     f <- trouves[1]

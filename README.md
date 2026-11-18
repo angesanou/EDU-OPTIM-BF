@@ -2,7 +2,7 @@
 
 **Plateforme d'optimisation de la répartition des infrastructures scolaires et du personnel enseignant**
 
-Data Challenge Burkina 2026, Défi 3 (EDU-OPTIM). Équipe DataGenuis.
+Data Challenge Burkina 2026, Défi 3 (EDU-OPTIM). Équipe Datagenius.
 
 EDU-OPTIM BURKINA est une application d'aide à la décision développée en R (Shiny). Elle mesure, pour chacune des 45 provinces, les déficits en salles de classe, en enseignants et en équipements de base au regard des normes nationales. Elle les synthétise dans un indice multidimensionnel de déficit éducatif (IMDE), projette les besoins à l'horizon 2030, hiérarchise les territoires prioritaires et propose une répartition optimale d'un budget donné.
 
@@ -72,8 +72,9 @@ La chaîne complète s'exécute en moins d'une minute. Chaque passage est consig
 | `02_traitement_donnees.R` | Nettoyage et transformation des données collectées |
 | `run_all.R` | Reproduction de toute la chaîne |
 | `03_preparer_depots.R` | Constitution des dossiers de dépôt 01 à 05 selon la convention de nommage du challenge |
-| `Collecte_data_rempli_v6.xlsx` | Base collectée (entrée du traitement) |
-| `documentation/` | Documentation du projet (15 pages au plus, Word et PDF) |
+| `Datagenius_01-collecte_D3_engineer_base-collecte-provinces-2015-2024_v6.xlsx` | Base collectée, étape 01 (entrée du traitement) |
+| `depots/` | Livrables des étapes 01 à 05 (collecte, nettoyage, transformation, analyse, interprétation), nommés selon la convention du challenge, avec un LISEZ-MOI par étape |
+| `documentation/` | Documentation du projet (PDF, 14 pages) |
 
 ## Méthodes
 

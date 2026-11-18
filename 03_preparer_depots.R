@@ -13,10 +13,10 @@
 # Le Data Pack n'est pas depose (fichiers publics du challenge, non modifies).
 # ==========================================================================
 
-EQUIPE  <- "EXX"        # <- numero d'equipe (ex. "E07")
+EQUIPE  <- "Datagenius" # nom de l'equipe (pas de numero attribue)
 DEFI    <- "D3"
 VERSION <- "v1"
-NOM_EQUIPE <- "DataGenuis"
+NOM_EQUIPE <- "Datagenius"
 
 racine <- getwd()
 if (!file.exists("02_traitement_donnees.R")) stop("Lancer ce script depuis le dossier Hackaton_MTDPCE.")
@@ -152,6 +152,6 @@ for (etape in names(DEPOTS)) {
 bilan <- do.call(rbind, bilan)
 print(bilan, right = FALSE, row.names = FALSE)
 utils::write.csv(bilan, file.path(sortie, "inventaire_depots.csv"), row.names = FALSE, fileEncoding = "UTF-8")
-if (EQUIPE == "EXX") message("ATTENTION : numero d'equipe non renseigne (EQUIPE = \"EXX\").")
+
 a_ajouter <- sum(grepl("^A AJOUTER", bilan$statut))
 if (a_ajouter) message(a_ajouter, " fichier(s) a ajouter avant le depot final (voir inventaire_depots.csv).")
