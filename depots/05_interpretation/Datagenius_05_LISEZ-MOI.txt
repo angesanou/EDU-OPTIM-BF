@@ -14,7 +14,7 @@ Fichiers
     Origine : EDU_OPTIM_BURKINA/resultats/rapports
     Contenu : Derniers rapports generes par l'application sur les donnees reelles (rapport executif PDF, fiche territoriale, classeur Excel).
 
-- Datagenius_05-interpretation_D3_analyst_documentation-15-pages_v1.pdf
+- Datagenius_05-interpretation_D3_analyst_documentation-15-pages_v2.pdf
     Origine : documentation/EDU-OPTIM_documentation_15p.pdf
     Contenu : Documentation du projet (15 pages, plan officiel du challenge).
 
